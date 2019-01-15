@@ -12,7 +12,7 @@ RUN git clone --recursive https://github.com/uglide/RedisDesktopManager.git -b 0
     && cd ./rdm/src \
     && ./configure \
     && . /opt/qt59/bin/qt59-env.sh && qmake && make \
-    && checkinstall -D --install
+    && make install
 RUN && cd /opt/redis-desktop-manager/ \
     && rm qt.conf
 
