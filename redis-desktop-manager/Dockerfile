@@ -11,7 +11,7 @@ RUN ln -s /usr/bin/gcc-4.8 /usr/bin/gcc \
 RUN git clone --recursive https://github.com/uglide/RedisDesktopManager.git -b 0.9 rdm \
     && cd ./rdm/src \
     && ./configure \
-    && source /opt/qt59/bin/qt59-env.sh && qmake && make \
+    && . /opt/qt59/bin/qt59-env.sh && qmake && make \
     && make install \
     && cd /usr/share/redis-desktop-manager/bin/ \
     && rm qt.conf
