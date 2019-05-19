@@ -8,7 +8,7 @@ RUN add-apt-repository ppa:ubuntu-toolchain-r/test -y && apt-get update && apt-g
 RUN ln -s /usr/bin/gcc-4.8 /usr/bin/gcc \
     && ln -s /usr/bin/g++-4.8 /usr/bin/g++
 
-RUN git clone --recursive https://github.com/uglide/RedisDesktopManager.git -b 0.9.8 rdm \
+RUN git clone --recursive https://github.com/uglide/RedisDesktopManager.git -b 2019.0 rdm \
     && cd ./rdm/src \
     && ./configure \
     && . /opt/qt59/bin/qt59-env.sh && qmake && make \
